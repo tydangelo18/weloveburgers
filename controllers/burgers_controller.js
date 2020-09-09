@@ -23,6 +23,7 @@ router.get("/", function(req, res) {
 
 // Create a burger
 router.post("/api/burgers", function(req, res) {
+    console.log(req.body);
     burger.create([
         "burger_name", "munched"
     ], [
