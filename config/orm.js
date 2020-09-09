@@ -21,7 +21,7 @@ function objectToSql(obj) {
 
     // Loop through keys and convert to a string
     for (let key in obj) {
-        let value = ob[key];
+        let value = obj[key];
         // Find hidden properties
         if (Object.hasOwnProperty.call(obj, key)) {
             // add quotes for strings with spaces
@@ -42,7 +42,7 @@ let orm = {
     // SELECT method
     all: function(tableInput, cb) {
         // SELECT method
-        let queryString = "SELECT * FROM " + tableInput + ";";
+        let queryString = " SELECT * FROM " + tableInput + ";";
         connection.query(queryString, function(err, result) {
             if (err) {
                 throw err;
@@ -53,12 +53,12 @@ let orm = {
     // CREATE method
     create: function(table, cols, vals, cb) {
         
-        let queryString = "INSERT INTO " + table;
+        let queryString = " INSERT INTO " + table;
 
         queryString += " (";
         queryString += cols.toString();
         queryString += ") ";
-        queryString += "VALUES (";
+        queryString += " VALUES (";
         queryString += pushQuestionMarks(vals.length);
         queryString += ") ";
 
@@ -74,9 +74,9 @@ let orm = {
     },
     // UPDATE method
     update: function(table, objColVals, condition, cb) {
-        let queryString = "UPDATE " + table;
+        let queryString = " UPDATE " + table;
 
-        queryString += " SET";
+        queryString += " SET ";
         queryString += objectToSql(objColVals);
         queryString += " WHERE ";
         queryString += condition;
@@ -92,8 +92,8 @@ let orm = {
     },
     // DELETE method
     delete: function(table, condition, cb) {
-        let queryString = "DELETE FROM " + table;
-        queryString += "WHERE ";
+        let queryString = " DELETE FROM " + table;
+        queryString += " WHERE ";
         queryString += condition;
 
         connection.query(queryString, function(err, result) {
