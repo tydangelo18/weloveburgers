@@ -1,0 +1,151 @@
+body {
+    background-color: #000000;
+    font-family: sans-serif;
+}
+
+/***Header***/
+#titleDiv {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #5762d5;
+    color: #000000;
+
+}
+
+#title {
+    font-size: 20px;
+    padding: 3px;
+}
+
+/***Order a Burger***/
+#orderDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 30px;
+    color: #ffffff;
+}
+
+#burgersDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#bg {
+    border-radius: 2em;
+    padding: 3px;
+    font-family: sans-serif;
+    border: 2px solid #ffffff;
+    width: 250px;
+    height: 20px;
+}
+
+#radioBtns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+#btnDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+button {
+    height: 25px;
+    width: 100px;
+    border-radius: 1em;
+    color: #5762d5;
+    background-color: #ffffff;
+    border: 2px solid #5762d5;
+}
+
+button:hover {
+    color: #ffffff;
+    background-color: #5762d5;
+    border: 2px solid #ffffff;
+}
+
+#subTitleOneDiv {
+    border: 2px solid #5762d5;
+    padding: 30px;
+    margin-right: 20px;
+    width: 450px;
+    background-color: #ffffff;
+}
+#subTitleTwoDiv {
+    border: 2px solid #5762d5;
+    padding: 30px;
+    margin-left: 20px;
+    width: 450px;
+    background-color: #ffffff;
+}
+
+ul {
+    list-style: none;
+}
+
+/***Footer***/
+#footerDiv {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #5762d5;
+    color: #000000;
+}
+
+Footer {
+    padding: 3px;
+    font-family: sans-serif;
+}
+
+@media (max-width: 768px) {
+    #burgersDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    #subTitleOneDiv {
+        border: 2px solid #5762d5;
+        padding: 30px;
+        margin: 5px;
+        width: 360px;
+        
+        background-color: #ffffff;
+    }
+    #subTitleTwoDiv {
+        border: 2px solid #5762d5;
+        padding: 30px;
+        margin: 5px;
+        width: 360px;
+        background-color: #ffffff;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+ 
+  

@@ -1,38 +1,70 @@
-<h1>Burgers!</h1>
-
-<h2>Available Burgers</h2>
-
-<ul>
-    {{#each burgers}}
-        {{#unless munched}}
-            {{> burgers/burger-block munch=true}}
-        {{/unless}}
-    {{/each}}
-</ul>
-
-<h2>Munched Burgers</h2>
-
-<ul>
-    {{#each burgers}}
-        {{#if munched}}
-            {{> burgers/burger-block munch=false}}
-        {{/if}}
-    {{/each}}
-</ul>
-
-<h2>Order a Burger</h2>
-<form class="create-form">
-
-    <div class="form-group">
-        <label for="bg">Burger Name:</label>
-        <input type="text" id="bg" name="burger_name">
+<!--Header -->
+    <div id="titleDiv">
+        <h1 id="title">We Love Burgers</h1>
+        
     </div>
 
-    <div class="form-group">
-        <label for="munched"></label><br>
-        <input type="radio" name="munched" value="1" checked> Burger Munched! <br>
-        <input type="radio" name="munched" value="0"> Ready to Serve
+    <!--Order a Burger -->
+    <div id="photo">
+        
+    </div>
+    <div id="orderDiv">
+        <img src="../assets/css/burger.jpg" alt="burger" width="300px" height="300px">
+        <div id="subTitleThreeDiv">
+            <h2 id="subTitleThree">Order a Burger</h2>
+        </div>
+        <div id="formDiv">
+            <form class="create-form">
+            
+                <div class="form-group">
+                    <label for="bg">Burger Name:</label>
+                    <input type="text" id="bg" name="burger_name">
+                </div>
+
+                <div class="form-group" id="radioBtns">
+                    <label for="munched"></label><br>
+                    <input type="radio" name="munched" value="1" checked> Burger Munched! <br>
+                    <input type="radio" name="munched" value="0"> Ready to Serve
+                </div>
+
+                <div id="btnDiv">
+                    <button type="submit">Order Burger</button>
+                </div>
+            </form>
+        </div>
     </div>
 
-    <button type="submit">Order Burger</button>
-</form>
+
+<!--Bottom Burgers-->
+<div id="burgersDiv">
+    <!--Available Burgers-->
+    <div id="subTitleOneDiv">
+        <h2 id="subTitleOne">Available Burgers</h2>
+    
+        <ul>
+            {{#each burgers}}
+                {{#unless munched}}
+                    {{> burgers/burger-block munch=true}}
+                {{/unless}}
+            {{/each}}
+        </ul>
+    </div>
+
+    <!--Munched Burgers-->
+    <div id="subTitleTwoDiv">
+        <h2 id="subTitleTwo">Munched Burgers</h2>
+        
+        <ul>
+            {{#each burgers}}
+                {{#if munched}}
+                    {{> burgers/burger-block munch=false}}
+                {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+</div>
+
+ <!--Footer-->
+<div id="footerDiv">
+    <Footer>#weloveburgers</Footer>
+</div>
