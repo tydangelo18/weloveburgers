@@ -4,7 +4,7 @@
 A Full-Stack Burger Logger application that utilizes a MySQL database and MVC structure.
 
 ### Demo
-This application is deployed to [Heroku]()
+This application is deployed to [Heroku](https://lit-thicket-35467.herokuapp.com/)
 
 ### Technologies Used 
 - HTML
