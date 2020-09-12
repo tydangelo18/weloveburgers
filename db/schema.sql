@@ -1,3 +1,5 @@
+DROP DATABASE IF EXISTS efeigloddhvj62al;
+
 CREATE DATABASE efeigloddhvj62al;
 
 USE efeigloddhvj62al;
